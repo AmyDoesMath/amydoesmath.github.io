@@ -17,13 +17,18 @@
         <p id="cografikonum">
 
         </p><br>
+
+        <a id="hi"></a>
+
         <script>
             let type = window.decodeURI(window.location.hash.substr(1))
             fields = type.split("*")
-            document.getElementById("aadsoyad").innerHTML = fields[0]
-            document.getElementById("gadsoyad").innerHTML = fields[1]
-            document.getElementById("siparisno").innerHTML = fields[2]
-            document.getElementById("cografikonum").innerHTML = fields[3].split(",").join(", ")
+            document.getElementById("aadsoyad").innerHTML = "Alıcı: " + fields[0]
+            document.getElementById("gadsoyad").innerHTML = "Göderici " + fields[1]
+            document.getElementById("siparisno").innerHTML = "Sipariş No." + fields[2]
+            document.getElementById("cografikonum").innerHTML = "Konum" + fields[3].split(",").join(", ")
+            
+            document.getElementById("hi").outerHTML += "href=\"www.google.com/maps/@" + fields[3] +"\""
         </script>
     </body>
 </html>
