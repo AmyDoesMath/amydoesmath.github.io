@@ -24,11 +24,11 @@
             let type = window.decodeURI(window.location.hash.substr(1))
             fields = type.split("*")
             document.getElementById("aadsoyad").innerHTML = "Alıcı: " + fields[0]
-            document.getElementById("gadsoyad").innerHTML = "Göderici " + fields[1]
-            document.getElementById("siparisno").innerHTML = "Sipariş No." + fields[2]
-            document.getElementById("cografikonum").innerHTML = "Konum" + fields[3].split(",").join(", ")
+            document.getElementById("gadsoyad").innerHTML = "Göderici: " + fields[1]
+            document.getElementById("siparisno").innerHTML = "Sipariş No: " + fields[2]
+            document.getElementById("cografikonum").innerHTML = "Konum: " + fields[3].split(",").join(", ")
             
-            document.getElementById("hi").setAttribute("href", "\"www.google.com/maps/@" + fields[3] +"\"")
+            document.getElementById("hi").setAttribute("href", "\"https://www.google.com/maps/@" + fields[3] +"\"")
         </script>
     </body>
 </html>
