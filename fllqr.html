@@ -18,7 +18,7 @@
 
         </p><br>
 
-        <a id="hi"></a>
+        <a id="hi">Link</a>
 
         <script>
             let type = window.decodeURI(window.location.hash.substr(1))
@@ -28,7 +28,7 @@
             document.getElementById("siparisno").innerHTML = "Sipariş No." + fields[2]
             document.getElementById("cografikonum").innerHTML = "Konum" + fields[3].split(",").join(", ")
             
-            document.getElementById("hi").outerHTML += "href=\"www.google.com/maps/@" + fields[3] +"\""
+            document.getElementById("hi").setAttribute("href", "\"www.google.com/maps/@" + fields[3] +"\"")
         </script>
     </body>
 </html>
