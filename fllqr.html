@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Naber</title>
+    </head>
+
+    <body>
+        <p id="aadsoyad">
+
+        </p><br>
+        <p id="gadsoyad">
+
+        </p><br>
+        <p id="siparisno">
+
+        </p><br>
+        <p id="cografikonum">
+
+        </p><br>
+        <script>
+            var type = window.location.hash.substr(1);
+            fields = type.split("*")
+            document.getElementById("aadsoyad").innerHTML = fields[0]
+            document.getElementById("gadsoyad").innerHTML = fields[1]
+            document.getElementById("siparisno").innerHTML = fields[2]
+            document.getElementById("cografikonum").innerHTML = fields[3]
+        </script>
+    </body>
+</html>
