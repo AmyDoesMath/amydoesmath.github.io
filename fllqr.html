@@ -18,12 +18,12 @@
 
         </p><br>
         <script>
-            let type = window.decodeURIComponent(window.location.hash.substr(1))
+            let type = window.decodeURI(window.location.hash.substr(1))
             fields = type.split("*")
             document.getElementById("aadsoyad").innerHTML = fields[0]
             document.getElementById("gadsoyad").innerHTML = fields[1]
             document.getElementById("siparisno").innerHTML = fields[2]
-            document.getElementById("cografikonum").innerHTML = fields[3]
+            document.getElementById("cografikonum").innerHTML = fields[3].split(",").join(", ")
         </script>
     </body>
 </html>
