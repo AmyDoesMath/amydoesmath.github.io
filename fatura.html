@@ -14,15 +14,17 @@
         <p id="three"></p>
         <p id="four"></p>
 
-        <a href="https://trendyol.com">İade Kodu için tıklayınız.</a>
+        <p><a href="https://trendyol.com">İade Kodu için tıklayınız.</a></p>
         
         <script>
             let type = window.decodeURI(window.location.hash.substr(1))
             fields = type.split("*")
             document.getElementById("one").innerHTML = "Alıcı: " + fields[0]
             document.getElementById("two").innerHTML = "Göderici: " + fields[1]
-            document.getElementById("three").innerHTML = "Sipariş No: " + fields[2]
+            document.getElementById("three").innerHTML = "No: " + fields[2]
             document.getElementById("four").innerHTML = "Konum: " + fields[3].split(",").join(", ")
+
+            document.getElementById("topbarlink").setAttribute("href", "fllqr.html#" + type)
         </script>
     </body>
 </html>
