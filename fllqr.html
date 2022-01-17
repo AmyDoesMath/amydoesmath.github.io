@@ -1,11 +1,12 @@
 <!doctype html>
 <html>
     <head>
-        <title>Naber</title>
+        <title>QR kod</title>
+        <link rel="stylesheet" href="fllqr.css">
     </head>
 
     <body>
-        <p id="aadsoyad">
+        <!--<p id="aadsoyad">
 
         </p><br>
         <p id="gadsoyad">
@@ -16,22 +17,29 @@
         </p><br>
         <p id="cografikonum">
 
-        </p><br>
-
-        <a id="konum">Konum için tıkla</a>
-        <a id="iade">İade için tıkla</a>
-        <a id="fatura">Fatura için tıkla</a>
-
+        </p><br><!-->
+        <div id="topbar">
+            <a id="topbarlink" class="topbar" href="fllqr.html">Ana Sayfa</a>
+        </div><br><br>
+        <a id="konum">Konum için tıkla</a><br><br>
+        <a id="fatura">Fatura için tıkla</a><br><br>
+        
         <script>
             let type = window.decodeURI(window.location.hash.substr(1))
             fields = type.split("*")
-            document.getElementById("aadsoyad").innerHTML = "Alıcı: " + fields[0]
-            document.getElementById("gadsoyad").innerHTML = "Göderici: " + fields[1]
-            document.getElementById("siparisno").innerHTML = "Sipariş No: " + fields[2]
-            document.getElementById("cografikonum").innerHTML = "Konum: " + fields[3].split(",").join(", ")
+            // document.getElementById("aadsoyad").innerHTML = "Alıcı: " + fields[0]
+            // document.getElementById("gadsoyad").innerHTML = "Göderici: " + fields[1]
+            // document.getElementById("siparisno").innerHTML = "Sipariş No: " + fields[2]
+            // document.getElementById("cografikonum").innerHTML = "Konum: " + fields[3].split(",").join(", ")
             
             document.getElementById("konum").setAttribute("href", "https://www.google.com/maps/@" + fields[3] + ",16z")
             document.getElementById("fatura").setAttribute("href", "https://amydoesmath.github.io/fatura.html#" + window.decodeURI(window.location.hash.substr(1)))
+            document.getElementById("topbar").setAttribute("onClick", "clickButton()")
+            document.getElementById("topbarlink").setAttribute("href", "fllqr.html#" + window.decodeURI(window.location.hash.substr(1)))
+            function clickButton() {
+                console.log("Sending...")
+            }
+
         </script>
     </body>
 </html>
