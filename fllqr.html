@@ -18,7 +18,7 @@
 
         </p><br>
 
-        <a id="hi">Konum için tıkla</a>
+        <a id="konum">Konum için tıkla</a>
         <a id="iade">İade için tıkla</a>
         <a id="fatura">Fatura için tıkla</a>
 
@@ -30,7 +30,8 @@
             document.getElementById("siparisno").innerHTML = "Sipariş No: " + fields[2]
             document.getElementById("cografikonum").innerHTML = "Konum: " + fields[3].split(",").join(", ")
             
-            document.getElementById("hi").setAttribute("href", "https://www.google.com/maps/@" + fields[3] + ",16z")
+            document.getElementById("konum").setAttribute("href", "https://www.google.com/maps/@" + fields[3] + ",16z")
+            document.getElementById("fatura").setAttribute("href", "https://amydoesmath.github.io/fatura.html#" + window.decodeURI(window.location.hash.substr(1)))
         </script>
     </body>
 </html>
