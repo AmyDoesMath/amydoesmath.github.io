@@ -22,7 +22,8 @@
             <a id="topbarlink" class="topbar" href="fllqr.html">Ana Sayfa</a>
         </div><br><br>
         <a id="konum">Konum için tıkla</a><br>
-        <a id="fatura">Fatura için tıkla</a>
+        <a id="fatura">Fatura için tıkla</a><br>
+        <p><a id="hi" onclick="iadeKodu()">İade Kodu için tıklayınız.</a></p>
         
         <script>
             let type = window.decodeURI(window.location.hash.substr(1))
@@ -37,9 +38,11 @@
             document.getElementById("topbar").setAttribute("onClick", "clickButton()")
             document.getElementById("topbarlink").setAttribute("href", "fllqr.html#" + window.decodeURI(window.location.hash.substr(1)))
             function clickButton() {
-                console.log("Sending...")
+                document.getElementById("topbarlink").setAttribute("style", "background-color:gray")
             }
-
+            function iadeKodu() {
+                document.getElementById("hi").innerHTML = Math.floor(Math.random() * 10000000000000000) + 1000000000000000
+            }
         </script>
     </body>
 </html>
