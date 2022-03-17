@@ -17,8 +17,10 @@ body {
 .info {
   color: rgb(244, 244, 244);
   font-family: 'Courier New', Courier, monospace;
+  padding: 1%;
 }
 .link {
   color: rgb(172, 158, 255);
   font-family: 'Courier New', Courier, monospace;
+  padding: 1%;
 }
