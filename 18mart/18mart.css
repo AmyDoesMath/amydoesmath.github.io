@@ -1,0 +1,9 @@
+body {
+    background-color: rgb(44, 44, 44);
+  }
+  .title {
+    color: rgb(244, 244, 244);
+    font-family: Courier New, sans-serif;
+    margin: auto;
+    padding: 5%;
+  }
