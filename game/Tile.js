@@ -13,4 +13,6 @@ class Tile {
     right = 0;
     down = 0;
     up = 0;
+
+    let index;
 }
