@@ -1,0 +1,13 @@
+* {
+    background-color: rgb(44, 44, 44);
+}
+.topbar {
+    background-color:rgb(55, 55, 55);
+    width: 100%;
+}
+.toolbox {
+    background-color: rgb(66, 66, 66);
+    width: 10%;
+    height: 100%;
+    
+}
